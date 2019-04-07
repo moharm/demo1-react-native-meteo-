@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import About from './components/About'
+import Search from './components/search'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start  on your app!</Text>
+      <View style={{marginVertical:40}}>
+        <Search/>
       </View>
     );
   }
