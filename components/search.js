@@ -1,25 +1,52 @@
 import React from 'react';
-import {TextInput, StyleSheet} from 'react-native';
+import {TextInput, StyleSheet, Button, View } from 'react-native';
+import globalStyle from '../style'
+import { createStackNavigator } from 'react-navigation'
 
 
-export default class Home extends React.Component {
+export  class Search extends React.Component {
+
+
+
+    constructor (props){
+        super(props)
+        this.state = {
+            city: 'Marrakech'
+        }
+    }
+
+    setState (city){
+        this.setState({city})
+    }
+
+    submit () {
+            this.props.navigation.navigate('Result', {city: this.state.city})
+    }
 
     render() {
         return (
-            <TextInput
-            style={style.textinput}
-          
-          />
+            <View style={globalStyle.view}>
+                <TextInput
+                style={globalStyle.textinput}
+                onChangeText={(text) => this.setState(text)}
+                value = {this.state.city}
+                />
+                <Button  style={globalStyle.button} onPress={() => this.submit()} title='rechecher' />
+
+            </View>
         )
     }
 }
 
-const style = StyleSheet.create ({
-textinput: {
-    height: 50,
-    borderColor: 'black',
-    borderWidth: 1,
-    borderRadius: 10
-
-}
+export default createStackNavigator({
+    Search: {
+        screen:Search
+    },
+    Result: {
+        screen:Search
+    }
+},{
+     defaultNavigationOptions: {
+        title: 'Welcome'
+      }
 })
