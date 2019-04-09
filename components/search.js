@@ -2,6 +2,7 @@ import React from 'react';
 import {TextInput, StyleSheet, Button, View } from 'react-native';
 import globalStyle from '../style'
 import { createStackNavigator } from 'react-navigation'
+import List from './List'
 
 
 export  class Search extends React.Component {
@@ -28,10 +29,10 @@ export  class Search extends React.Component {
             <View style={globalStyle.view}>
                 <TextInput
                 style={globalStyle.textinput}
-                onChangeText={(text) => this.setState(text)}
+                onChangeText = {(text) => this.setState(text)}
                 value = {this.state.city}
                 />
-                <Button  style={globalStyle.button} onPress={() => this.submit()} title='rechecher' />
+                <Button  color={globalStyle.button.backgroundColor} onPress={() => this.submit()} title='rechecher' />
 
             </View>
         )
@@ -43,10 +44,18 @@ export default createStackNavigator({
         screen:Search
     },
     Result: {
-        screen:Search
+        screen:List 
     }
 },{
      defaultNavigationOptions: {
-        title: 'Welcome'
+        title: 'Welcome',
+        headerStyle: {
+            backgroundColor: '#A2273C',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+            
       }
 })

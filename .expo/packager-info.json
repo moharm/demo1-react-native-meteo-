@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 11568,
-  "expoServerNgrokUrl": "https://du-2f3.moharm12.demo1.exp.direct",
-  "packagerNgrokUrl": "https://packager.du-2f3.moharm12.demo1.exp.direct",
-  "ngrokPid": 9956
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://em-5n3.moharm12.demo1.exp.direct",
+  "packagerNgrokUrl": "https://packager.em-5n3.moharm12.demo1.exp.direct",
+  "ngrokPid": 20476
 }

@@ -17,7 +17,7 @@ export default class About extends React.Component {
                 nlnklnklnnlknllknklnlknlkn
                 klnlknlknklnlknlknlknos du moi </Text>
 
-                <Button color={globalStyle.color} onPress={() => this.search() } title='Rechercher une ville' />
+                <Button color={globalStyle.button.backgroundColor} onPress={() => this.search() } title='Rechercher une ville' />
 
             </View>
     )
